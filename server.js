@@ -26,13 +26,13 @@ app.get("/movie", function handleGetGenre(req, res) {
   let response = MOVIES;
 
   if (req.query.genre) {
-    response = respones.filter(movie =>
+    response = response.filter(movie =>
       movie.genre.toLowerCase().includes(req.query.genre.toLowerCase())
     );
   }
   if (req.query.country) {
-    response = respones.filter(movie =>
-      movie.country.toLowerCase().includes(req.country.genre.toLowerCase())
+    response = response.filter(movie =>
+      movie.country.toLowerCase().includes(req.query.country.toLowerCase())
     );
   }
   if (req.query.avg_vote) {
